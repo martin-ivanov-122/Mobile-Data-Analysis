@@ -54,6 +54,7 @@ Activity_names_unique = unique(Activity_names); % Determines unique strings in t
 [P8_Q1,P8_Q2,P8_Q3,P8_Q4,P8_Q5,P8_Q6,P8_Q7,P8_Q8,P8_Q9] = get_results_data(P8_results,Activity_names_unique); % Questionnaire Data trend lines for partipant 8
 
 
+%% Graph Data
 %Partipant 1
 %Set up for legend of graph
 questionnaire_labels = ["U0571781825","MIOS-14","GAD-7","GAD-2","MIOS-5","UCLA-3","PSS-4","PHQ-9","PHQ-2","PSS-10"];
@@ -89,4 +90,8 @@ questionnaire_labels = ["U8920175053","MIOS-14","GAD-7","GAD-2","UCLA-3","PSS-4"
 %Call to function which graphs the trendlines
 a=graph_results_data(questionnaire_labels,P8_Q1,P8_Q2,P8_Q3,P8_Q5,P8_Q6,P8_Q7,P8_Q8,P8_Q9); % Questionnaire Data trend lines for patient 1
 
-
+%% Statistical Analysis
+titles = ["MIOS-14";"GAD-7";"GAD-2";"MIOS-5";"UCLA-3";"PSS-4";"PHQ-9";"PHQ-2";"PSS-10"];
+stat_analysis_P2=stat_analysis(P2_Q1,P2_Q2,P2_Q3,P2_Q4,P2_Q5,P2_Q6,P2_Q7,P2_Q8,P2_Q9,titles);
+titles = ["MIOS-14";"GAD-2";"UCLA-3";"PSS-4";"PHQ-2";"PSS-10"];
+stat_analysis_P8=stat_analysis(P8_Q1,P8_Q3,P8_Q5,P8_Q6,P8_Q8,P8_Q9,titles);
